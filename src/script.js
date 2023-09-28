@@ -124,3 +124,11 @@ searchInput.addEventListener("keydown", function(event) {
         findWeather();
     }
 });
+async function findWeather() {
+    var location = document.getElementById("search").value;
+    
+    // Set the unit to Celsius
+    document.getElementById("unit-toggle").value = "celsius";
+    
+    fetchData(location, "celsius");
+}
